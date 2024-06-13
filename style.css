@@ -98,39 +98,15 @@ main .Line-up .lineup {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-main .Line-up .lineup1 {
-  width: 100%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-main .Line-up .lineup1 #img1 {
-  padding-top: 30px;
-  padding-bottom: 50px;
-}
-main .Line-up .lineup1 #img2 {
-  padding-top: 50px;
-  padding-bottom: 15px;
-}
-main .Line-up .lineup1 h2 {
-  text-align: center;
-  font-size: 40px;
-  padding-top: 150px;
-}
-main .Line-up .lineup1 :first-child {
-  width: 300px;
-}
 main .Line-up .lineup2 {
   height: 100vh;
   width: 33vw;
   color: white;
   background-color: #1A0D43;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 main .Line-up .lineup2 h1 {
   color: white;
@@ -138,11 +114,9 @@ main .Line-up .lineup2 h1 {
   justify-content: center;
   align-items: center;
 }
-main .Line-up .lineup2 :first-child {
-  width: 300px;
-}
-main .Line-up .lineup2 #img3 {
+main .Line-up .lineup2 .img3 {
   padding-bottom: 50px;
+  width: 300px;
 }
 main .Line-up .lineup2 .img4 {
   padding-top: 50px;
@@ -156,26 +130,22 @@ main .Line-up .lineup2 .titrem h1, main .Line-up .lineup2 .titrem h2 {
   text-align: center;
   font-size: 40px;
 }
-main .Line-up .lineup3 {
-  color: white;
-  display: grid;
-  grid-template-rows: 1fr;
-  justify-content: center;
-  align-items: end;
+main .Line-up #lineup1 {
+  background-color: #EA224E;
+  width: auto;
 }
-main .Line-up .lineup3 :first-child {
-  width: 300px;
+main .Line-up #lineup1 h1 {
+  display: none;
 }
-main .Line-up .lineup3 h2 {
-  text-align: center;
-  font-size: 40px;
-  margin-bottom: 30px;
+main .Line-up #lineup3 {
+  background-color: #EA224E;
+  width: auto;
 }
-main .Line-up .lineup3 #img5 {
-  padding-bottom: 38vh;
+main .Line-up #lineup3 h1 {
+  display: none;
 }
 main .activite {
-  height: 100vh;
+  height: fit-content;
   background-color: #1A0D43;
   color: white;
 }
@@ -195,17 +165,18 @@ main .activite .activites h2 {
   padding: 15px;
 }
 main .activite .activites img {
-  padding-bottom: 32px;
+  padding-bottom: 24px;
 }
 main .activite .activites p {
   font-size: 24px;
-  padding: 32px;
+  padding: 12px;
 }
 main .activite .activites .bouton {
-  margin-top: 32px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 main .activite .activites .activite2 .bouton {
-  margin-top: 128px;
+  margin-top: 72px;
 }
 main .Tickets {
   background-color: #EA224E;
@@ -219,7 +190,7 @@ main .Tickets h1 {
   padding-bottom: 15px;
 }
 main .Tickets .ticket {
-  height: fit-content;
+  height: 80vh;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -234,9 +205,10 @@ main .Tickets .ticket img {
   margin-left: auto;
   margin-right: auto;
   padding: 32px;
+  padding-bottom: 0;
 }
 main .Tickets .ticket .bouton2 {
-  margin-top: 24vh;
+  margin-top: 22vh;
   margin-bottom: 32px;
 }
 main .Tickets .ticket .fonct {
@@ -251,6 +223,7 @@ main .Tickets .ticket .fonct img {
   padding-left: 10%;
   margin: 0;
   width: 15px;
+  padding: 12px;
 }
 main .Tickets .ticket .ticket1 {
   width: 23vw;
@@ -265,7 +238,7 @@ main .Tickets .ticket .ticket3 {
   background-color: #1A0D43;
 }
 main .Tickets .ticket .ticket3 .bouton2 {
-  margin-top: 12vh;
+  margin-top: 13vh;
 }
 main .Infos {
   color: white;
@@ -317,7 +290,7 @@ main .Infos .infos .lieux {
 
 footer {
   background-color: #E3D56D;
-  height: 30vh;
+  height: fit-content;
 }
 footer .sponsor {
   padding-top: 5px;
@@ -336,7 +309,7 @@ footer .footer3 .menuf {
   display: grid;
   justify-content: left;
   font-size: 16px;
-  row-gap: 24px;
+  row-gap: 8px;
 }
 footer .footer3 .menuf a {
   text-decoration: none;
@@ -404,6 +377,71 @@ footer p {
   main .Line-up .lineup {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 15px;
+  }
+  main .Line-up .lineup #lineup2 {
+    width: 86vw;
+  }
+  main .Tickets {
+    background-color: #1A0D43;
+    color: white;
+    height: 100vh;
+  }
+  main .Tickets h1 {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 95px;
+    padding-bottom: 15px;
+  }
+  main .Tickets .ticket {
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  main .Tickets .ticket h2 {
+    text-align: center;
+    font-size: 40px;
+  }
+  main .Tickets .ticket img {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 32px;
+    padding-bottom: 0;
+  }
+  main .Tickets .ticket .bouton2 {
+    margin-top: 22vh;
+    margin-bottom: 32px;
+  }
+  main .Tickets .ticket .fonct {
+    display: flex;
+    align-items: center;
+  }
+  main .Tickets .ticket .fonct p {
+    margin: 0;
+  }
+  main .Tickets .ticket .fonct img {
+    flex-basis: auto;
+    padding-left: 10%;
+    margin: 0;
+    width: 15px;
+    padding: 12px;
+  }
+  main .Tickets .ticket .ticket1 {
+    width: 23vw;
+    background-color: #1A0D43;
+  }
+  main .Tickets .ticket .ticket2 {
+    width: 23vw;
+    background-color: #1A0D43;
+  }
+  main .Tickets .ticket .ticket3 {
+    width: 23vw;
+    background-color: #1A0D43;
+  }
+  main .Tickets .ticket .ticket3 .bouton2 {
+    margin-top: 13vh;
   }
 }
 @media only screen and (min-width: 2130px) {
