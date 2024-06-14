@@ -33,7 +33,7 @@
     border-radius: 150px;
     padding: 10px;
     width: 200px;
-    height: 70px;
+    height: 50px;
     justify-content: center;
     align-items: center;
     a{
@@ -149,20 +149,17 @@ main{
             }
         }
         
-        #lineup1{
+        #lineup1,#lineup3{
             h1{
                 display: none;
             }
             background-color:#EA224E;
             width: auto;
-        }
-        #lineup3{
-            h1{
-                display: none;
+            h2{
+                margin-top: 12.5vh;
             }
-            background-color:#EA224E;
-            width: auto;
         }
+       
     }
     .activite{
         height: fit-content;
@@ -515,3 +512,80 @@ footer{
       }
     
 }
+///artiste//
+/// 
+/// 
+///  
+/// 
+.titrefa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:95px ;
+    padding-bottom:10vh;
+    
+}
+.btn-g{
+           
+    img{
+        padding-top: 5px;
+        margin-right: 0  ;
+    }
+    a{
+        font-size: 30px;
+    }
+}
+.btn-d{
+   
+    img{
+        padding-top: 5px;
+        margin-right: 0  ;
+    }
+    a{
+        font-size: 30px;
+    }
+}
+#artiste{
+    background-color: #1A0D43;
+    height: 100vh;
+    color: white;
+    
+    .artiste{
+        display: flex;
+        gap: 5vw;
+        padding-top:5vh ;
+        .logoa{
+            display: flex;
+        }
+        .expl{
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+            h2,h3{
+                margin: 0;
+            }
+            h2{
+                font-size: 40px;
+            }
+            h3{
+                font-size: 32px;
+            }
+            p{
+                padding-top: 30px;
+                font-size: 17px;
+            }
+        }
+    }   
+}
+/////formulaire///
+/// 
+/// 
+/// 
+/// 
+///
+///  
+
+
+
+////Acheter////

@@ -36,7 +36,7 @@
   border-radius: 150px;
   padding: 10px;
   width: 200px;
-  height: 70px;
+  height: 50px;
   justify-content: center;
   align-items: center;
 }
@@ -130,19 +130,15 @@ main .Line-up .lineup2 .titrem h1, main .Line-up .lineup2 .titrem h2 {
   text-align: center;
   font-size: 40px;
 }
-main .Line-up #lineup1 {
+main .Line-up #lineup1, main .Line-up #lineup3 {
   background-color: #EA224E;
   width: auto;
 }
-main .Line-up #lineup1 h1 {
+main .Line-up #lineup1 h1, main .Line-up #lineup3 h1 {
   display: none;
 }
-main .Line-up #lineup3 {
-  background-color: #EA224E;
-  width: auto;
-}
-main .Line-up #lineup3 h1 {
-  display: none;
+main .Line-up #lineup1 h2, main .Line-up #lineup3 h2 {
+  margin-top: 12.5vh;
 }
 main .activite {
   height: fit-content;
@@ -449,6 +445,62 @@ footer p {
     height: 90vh;
     width: auto;
   }
+}
+.titrefa {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 95px;
+  padding-bottom: 10vh;
+}
+
+.btn-g img {
+  padding-top: 5px;
+  margin-right: 0;
+}
+.btn-g a {
+  font-size: 30px;
+}
+
+.btn-d img {
+  padding-top: 5px;
+  margin-right: 0;
+}
+.btn-d a {
+  font-size: 30px;
+}
+
+#artiste {
+  background-color: #1A0D43;
+  height: 100vh;
+  color: white;
+}
+#artiste .artiste {
+  display: flex;
+  gap: 5vw;
+  padding-top: 5vh;
+}
+#artiste .artiste .logoa {
+  display: flex;
+}
+#artiste .artiste .expl {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+#artiste .artiste .expl h2, #artiste .artiste .expl h3 {
+  margin: 0;
+}
+#artiste .artiste .expl h2 {
+  font-size: 40px;
+}
+#artiste .artiste .expl h3 {
+  font-size: 32px;
+}
+#artiste .artiste .expl p {
+  padding-top: 30px;
+  font-size: 17px;
 }
 
 /*# sourceMappingURL=style.css.map */
