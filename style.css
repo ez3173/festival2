@@ -204,7 +204,7 @@ main .Tickets .ticket img {
   padding-bottom: 0;
 }
 main .Tickets .ticket .bouton2 {
-  margin-top: 22vh;
+  margin-top: 27vh;
   margin-bottom: 32px;
 }
 main .Tickets .ticket .fonct {
@@ -234,7 +234,7 @@ main .Tickets .ticket .ticket3 {
   background-color: #1A0D43;
 }
 main .Tickets .ticket .ticket3 .bouton2 {
-  margin-top: 13vh;
+  margin-top: 21vh;
 }
 main .Infos {
   color: white;
@@ -261,7 +261,6 @@ main .Infos .infos h2 {
 main .Infos .infos .contact {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   row-gap: 10vh;
 }
 main .Infos .infos .contact .contacts {
@@ -279,12 +278,14 @@ main .Infos .infos .contact .contacts p {
 }
 main .Infos .infos .lieux {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 14vh;
   justify-content: center;
   margin: 0;
 }
 
 footer {
+  width: 100%;
   background-color: #E3D56D;
   height: fit-content;
 }
@@ -380,7 +381,7 @@ footer p {
   main .Tickets {
     background-color: #1A0D43;
     color: white;
-    height: 100vh;
+    height: fit-content;
   }
   main .Tickets h1 {
     text-align: center;
@@ -389,8 +390,9 @@ footer p {
     padding-bottom: 15px;
   }
   main .Tickets .ticket {
-    height: 80vh;
+    height: fit-content;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     width: 100%;
   }
@@ -407,7 +409,7 @@ footer p {
     padding-bottom: 0;
   }
   main .Tickets .ticket .bouton2 {
-    margin-top: 22vh;
+    margin-top: 14vh;
     margin-bottom: 32px;
   }
   main .Tickets .ticket .fonct {
@@ -425,19 +427,59 @@ footer p {
     padding: 12px;
   }
   main .Tickets .ticket .ticket1 {
-    width: 23vw;
+    width: 80vw;
     background-color: #1A0D43;
   }
   main .Tickets .ticket .ticket2 {
-    width: 23vw;
+    width: 80vw;
     background-color: #1A0D43;
   }
   main .Tickets .ticket .ticket3 {
-    width: 23vw;
+    width: 80vw;
     background-color: #1A0D43;
   }
   main .Tickets .ticket .ticket3 .bouton2 {
-    margin-top: 13vh;
+    margin-top: 8vh;
+  }
+  footer .sponsor {
+    width: 100%;
+    display: grid;
+    grid-template-areas: "eri eri eri eri fwb fwb fwb fwb proxi proxi proxi proxi" "fuze fuze fuze fuze fuze fuze win win win win win win";
+    align-items: center;
+  }
+  footer .sponsor #fuze {
+    grid-area: fuze;
+  }
+  footer .sponsor #win {
+    grid-area: win;
+  }
+  footer .sponsor #eri {
+    grid-area: eri;
+  }
+  footer .sponsor #fwb {
+    grid-area: fwb;
+  }
+  footer .sponsor #proxi {
+    grid-area: proxi;
+  }
+}
+@media only screen and (max-width: 1505px) {
+  main .activite .activites {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  main .Infos {
+    height: fit-content;
+  }
+  main .Infos .infos {
+    grid-template-areas: "lieux lieux lieux lieux lieux lieux" "contact contact contact contact contact contact";
+    justify-content: center;
+  }
+  main .Infos .infos .contact {
+    grid-area: contact;
+  }
+  main .Infos .infos .lieux {
+    grid-area: lieux;
   }
 }
 @media only screen and (min-width: 2130px) {
@@ -501,6 +543,80 @@ footer p {
 #artiste .artiste .expl p {
   padding-top: 30px;
   font-size: 17px;
+}
+
+input {
+  width: 70%;
+  height: 60px;
+  background-color: #E3D56D;
+  border-radius: 150px;
+}
+
+#formulaire {
+  background-color: #1A0D43;
+  height: 100vh;
+  color: white;
+}
+#formulaire h1 {
+  padding-top: 95px;
+  padding-bottom: 50px;
+  text-align: center;
+  font-size: 40px;
+}
+#formulaire .formulaires h2 {
+  margin-left: 15%;
+  font-size: 30px;
+}
+#formulaire .formulaires input {
+  margin-bottom: 5vh;
+}
+#formulaire .formulaires .formulaire {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#formulaire .formulaires .formulaire input {
+  margin-bottom: 5vh;
+}
+#formulaire .formulaireText {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#formulaire .formulaireText input {
+  height: 15vh;
+  border-radius: 80px;
+}
+#formulaire .downMusic {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#formulaire .envoyer {
+  width: 150px;
+  margin-right: 5vh;
+}
+
+#acheter {
+  background-color: #EA224E;
+  color: white;
+  height: 100vh;
+}
+#acheter .maina {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#acheter .maina .acheter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#acheter .maina .acheter p {
+  width: 45%;
 }
 
 /*# sourceMappingURL=style.css.map */
