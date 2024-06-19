@@ -122,7 +122,47 @@ main .Line-up .lineup {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-main .Line-up .lineup2 {
+main .Line-up .lineup a {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+main .Line-up .lineup a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+main .Line-up .lineup a:hover::before {
+  opacity: 1;
+}
+main .Line-up .lineup a img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+main .Line-up .lineup a img.default {
+  height: 300px;
+  width: 300px;
+}
+main .Line-up .lineup a img.small {
+  height: 150px;
+}
+main .Line-up .lineup a img:hover {
+  height: 300px;
+}
+main .Line-up .lineup a:not(:hover) img {
+  height: 150px;
+}
+main .Line-up .lineup a:hover ~ a img, main .Line-up .lineup a:hover ~ a img.default {
+  height: 150px;
+}
+main .Line-up .lineup .lineup2 {
   height: 100vh;
   width: 33vw;
   color: white;
@@ -132,37 +172,37 @@ main .Line-up .lineup2 {
   flex-direction: column;
   align-items: center;
 }
-main .Line-up .lineup2 h1 {
+main .Line-up .lineup .lineup2 h1 {
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 5vh;
 }
-main .Line-up .lineup2 .img3 {
+main .Line-up .lineup .lineup2 .img3 {
   padding-bottom: 50px;
   width: 300px;
 }
-main .Line-up .lineup2 .img4 {
+main .Line-up .lineup .lineup2 .img4 {
   padding-top: 50px;
   padding-bottom: 15px;
 }
-main .Line-up .lineup2 .titrem {
+main .Line-up .lineup .lineup2 .titrem {
   width: 100%;
 }
-main .Line-up .lineup2 .titrem h1, main .Line-up .lineup2 .titrem h2 {
+main .Line-up .lineup .lineup2 .titrem h1, main .Line-up .lineup .lineup2 .titrem h2 {
   padding: 30px;
   text-align: center;
   font-size: 40px;
 }
-main .Line-up #lineup1, main .Line-up #lineup3 {
+main .Line-up .lineup #lineup1, main .Line-up .lineup #lineup3 {
   background-color: #EA224E;
   width: auto;
 }
-main .Line-up #lineup1 h1, main .Line-up #lineup3 h1 {
+main .Line-up .lineup #lineup1 h1, main .Line-up .lineup #lineup3 h1 {
   display: none;
 }
-main .Line-up #lineup1 h2, main .Line-up #lineup3 h2 {
+main .Line-up .lineup #lineup1 h2, main .Line-up .lineup #lineup3 h2 {
   margin-top: 12.5vh;
 }
 main .activite {
@@ -305,10 +345,14 @@ main .Infos .infos .contact .contacts p {
 main .Infos .infos .lieux {
   display: flex;
   flex-direction: column;
-  row-gap: 10vh;
+  row-gap: 3vh;
   justify-content: center;
   margin: 0;
 }
+main .Infos .infos .lieux iframe {
+  width: 35vw;
+}
+
 footer {
   width: 100%;
   background-color: #E3D56D;
@@ -324,7 +368,6 @@ footer .footer3 {
   padding-top: 3vh;
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: end;
 }
 footer .footer3 .menuf {
@@ -349,6 +392,27 @@ footer p {
   text-align: center;
 }
 
+@media all and (max-height: 1000px) {
+  main .Infos {
+    height: fit-content;
+  }
+  main .Infos .infos {
+    grid-template-areas: "lieux lieux lieux lieux lieux lieux" "contact contact contact contact contact contact";
+    justify-content: center;
+  }
+  main .Infos .infos .contact {
+    grid-area: contact;
+  }
+  main .Infos .infos .contact #gmail {
+    margin-bottom: 15px;
+  }
+  main .Infos .infos .lieux {
+    grid-area: lieux;
+  }
+  main .Infos .infos .lieux iframe {
+    width: 75vw;
+  }
+}
 @media all and (max-width: 1194px) {
   .wrapper {
     margin: 0 24px;
@@ -366,7 +430,6 @@ footer p {
     margin: 50px;
     overflow: visible;
     position: fixed;
-    padding-left: 85vw;
     z-index: 2;
   }
   header nav #burger-menu span,
@@ -498,6 +561,28 @@ footer p {
   main .Line-up .lineup #lineup2 {
     width: 86vw;
   }
+  main .activite .activite1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  main .activite .activite1 img {
+    width: 80vw;
+  }
+  main .activite .activite1 p {
+    margin: 0;
+  }
+  main .activite .activite2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  main .activite .activite2 p {
+    margin: 0;
+  }
+  main .activite .activite2 img {
+    width: 80vw;
+  }
   main .Tickets {
     background-color: #1A0D43;
     color: white;
@@ -561,10 +646,37 @@ footer p {
   main .Tickets .ticket .ticket3 .bouton2 {
     margin-top: 8vh;
   }
+  main .Infos {
+    height: fit-content;
+  }
+  main .Infos .infos {
+    grid-template-areas: "lieux lieux lieux lieux lieux lieux" "contact contact contact contact contact contact";
+    justify-content: center;
+  }
+  main .Infos .infos .contact {
+    grid-area: contact;
+  }
+  main .Infos .infos .contact .contacts img {
+    padding-right: 2vh;
+  }
+  main .Infos .infos .contact .contacts p {
+    font-size: 20px;
+  }
+  main .Infos .infos .contact #gmail {
+    margin-bottom: 15px;
+  }
+  main .Infos .infos .lieux {
+    grid-area: lieux;
+  }
+  main .Infos .infos .lieux iframe {
+    width: 75vw;
+  }
   footer .sponsor {
+    padding-top: 30px;
     width: 100%;
     display: grid;
-    grid-template-areas: "eri eri eri eri fwb fwb fwb fwb proxi proxi proxi proxi" "fuze fuze fuze fuze fuze fuze win win win win win win";
+    column-gap: 2vh;
+    grid-template-areas: "eri eri  fwb fwb proxi proxi " "fuze fuze fuze  win win win ";
     align-items: center;
   }
   footer .sponsor #fuze {
@@ -582,24 +694,29 @@ footer p {
   footer .sponsor #proxi {
     grid-area: proxi;
   }
+  footer .footer3 {
+    height: 50vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: "logof logof logof logof" "menuf menuf iconf iconf";
+  }
+  footer .footer3 .menuf {
+    grid-area: menuf;
+    margin-right: 5vw;
+  }
+  footer .footer3 .logof {
+    grid-area: logof;
+  }
+  footer .footer3 .iconf {
+    grid-area: iconf;
+    margin-left: 5vw;
+  }
 }
 @media all and (max-width: 1505px) {
   main .activite .activites {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-  }
-  main .Infos {
-    height: fit-content;
-  }
-  main .Infos .infos {
-    grid-template-areas: "lieux lieux lieux lieux lieux lieux" "contact contact contact contact contact contact";
-    justify-content: center;
-  }
-  main .Infos .infos .contact {
-    grid-area: contact;
-  }
-  main .Infos .infos .lieux {
-    grid-area: lieux;
   }
 }
 @media all and (min-width: 2130px) {
@@ -717,7 +834,10 @@ input {
   margin-right: 5vh;
 }
 
-
+#counter-display {
+  margin-top: 20px;
+  font-size: 24px;
+}
 
 #acheter {
   background-color: #EA224E;
