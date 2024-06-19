@@ -1,12 +1,19 @@
 *{
     margin: 0 auto;
     padding: 0;
-}
-.allerta-stencil-regular {
     font-family: "Allerta Stencil", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
+}
+
+button {
+    width:100%;
+    height: 100%;
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #fff;
+}
 .wrapper{
     margin: 0 14vw ;
     height: 100%;
@@ -43,14 +50,20 @@
         
     }
 }
+.bouton2:active{
+    background-color: #fff;
+}
 header{
+    width:100%;
     background-color: #1A0D43;
     height: fit-content;
     
     nav{
         padding: 10px;
         font-size:32px;
-        
+        #burger-menu{
+            display: none;
+        }
         ul{
             display: grid;
             list-style:none;
@@ -67,6 +80,7 @@ header{
                 a{
                     text-decoration: none;
                     color: white;
+                    position: fixed;
                 }
             }
         }
@@ -77,6 +91,7 @@ header{
         padding: 20px;
         justify-content: center;
         img{
+            margin-top: 25px;
             width: 36vw;
            
           
@@ -88,9 +103,18 @@ header{
             color:white;
             .compteur{
                 display: flex;
-            }   
+                flex-direction: column;
+                #demo{
+
+                    font-size: 48px;
+                }
+                p{
+                    font-size: 32px;
+                }
+            }
            
-        }   
+        }  
+         
     }
 
 }
@@ -127,7 +151,7 @@ main{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                
+                padding-bottom: 5vh;
                 
             }
             .img3{
@@ -204,7 +228,7 @@ main{
     .Tickets{
         background-color: #EA224E;
         color: white;
-        height: 100vh;
+        height: 100svh;
         h1{
             text-align: center;
             font-size: 40px;
@@ -226,6 +250,7 @@ main{
                 margin-left: auto;
                 margin-right: auto;
                 padding: 32px;
+                padding-top: 0;
                 padding-bottom: 0;
             }
             .bouton2{
@@ -267,7 +292,7 @@ main{
                 width: 23vw;
                 background-color: #1A0D43;
                 .bouton2{
-                    margin-top: 21vh;
+                    margin-top: 19vh;
                 }
             }
         }
@@ -317,10 +342,12 @@ main{
             .lieux{
                 display: flex;
                 flex-direction: column;
-                row-gap: 14vh;
+                row-gap: 10vh;
                 justify-content: center;
                 margin: 0;
-                
+                img{
+
+                } 
             }
         }
     }
@@ -367,13 +394,143 @@ footer{
         text-align: center;
     }
 }
-@media only screen and (max-width: 1194px) {
+@media all and (max-height: 834px)   {
+
+}
+@media all and (max-width: 1194px)    {
     .wrapper {
         margin: 0 24px;
     }
 
     header {
+        width: 100%;
         height: fit-content;
+        nav{
+
+            #burger-menu {
+                display: flex;
+                display: block;
+                cursor: pointer;
+                height: 27px;
+                width: 27px;
+                margin: 50px;
+                overflow: visible;
+                position: fixed;
+                padding-left: 85vw;
+                //permet de fermer le menu quand on clique sur la barre de recherche
+                z-index: 2;
+               
+            
+                
+                span,
+                span:before,
+                span:after {
+                    background: #fff;
+                    display: block;
+                    height: 2px;
+                    opacity: 1;
+                    position: absolute;
+                    transition: 0.3s ease-in-out;
+                }
+            
+                span:before,
+                span:after {
+                    content: '';
+                }
+            
+                // TOP
+                span:before {
+                    left: 0px;
+                    top: -10px;
+                    width: 27px;
+                }
+            
+                // MIDDLE
+                span {
+                    right: 0px;
+                    top: 13px;
+                    width: 27px;
+                }
+            
+                // BOTTOM
+                span:after {
+                    left: 0px;
+                    top: 10px;
+                    width: 27px;
+                }
+            
+                // ROTATION ON CLICK
+                &.close {
+                    // TOP
+                    span:before {
+                        top: 0px;
+                        transform: rotate(90deg);
+                        width: 27px;
+                    }
+            
+                    // MIDDLE
+                    span {
+                        transform: rotate(-45deg);
+                        top: 13px;
+                        width: 27px;
+                    }
+            
+                    // BOTTOM
+                    span:after {
+                        top: 0px;
+                        left: 0;
+                        transform: rotate(90deg);
+                        opacity: 0;
+                        width: 0;
+                    }
+                }
+            }
+            
+            #menu {
+                z-index: 1;
+                width: 105%;
+                min-height: 100%;
+                margin-left:-5%;
+                position: fixed;
+                top: 0;
+                height: 0;
+                visibility: hidden;
+                opacity: 0;
+                text-align: center;
+                padding-top: 20px;
+                
+                transition: all 0.3s ease-in-out;
+            
+                &.overlay {
+                    visibility: visible;
+                    opacity: 1;
+                    padding-top: 100px;
+                    background: rgba(0, 0, 0, 0.5);
+                }
+            
+                    ul {
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                        li {
+                        list-style: none;
+                        
+                                a {
+                                    color: #fff;
+                                    display: block;
+                                    font-size: 32px;
+                                    margin-bottom: 30px;
+                                    text-decoration: none;
+                                    position: relative;
+                                }
+
+                        }
+                    }
+            
+            }
+            
+        }
+        
         .home {
             display: grid;
            
@@ -535,7 +692,7 @@ footer{
     }
     } 
 } 
-@media only screen and (max-width: 1505px){
+@media all and (max-width: 1505px){
     main{
         .activite{
             .activites{
@@ -560,7 +717,7 @@ footer{
     }
     
 } 
-@media only screen and (min-width: 2130px){
+@media all and (min-width: 2130px){
     header{
         .home{
           img{
@@ -708,7 +865,12 @@ input{
 ////Acheter////
 /// 
 /// 
+///
 /// 
+#counter-display {
+margin-top: 20px;
+font-size: 24px;
+} 
 #acheter{
     background-color: #EA224E;
     color: white;
@@ -726,8 +888,71 @@ input{
         align-items: center;
         justify-content: space-between;
         p{
-            width:45%;
+            width: 45%;
         }
+        text-align: center;
+
+        .bouton2 {
+            display: flex;
+            align-items: center;
+            background-color: #E3D56D; /* Bouton rouge par défaut */
+            border-radius: 150px;
+            padding: 10px;
+            width: 250px;
+            height: 50px;
+            justify-content: center; /* Centrer horizontalement */
+            position: relative;
+            border: none; /* Supprimer la bordure */
+            cursor: pointer;
+
+            &.clicked {
+            background-color: white; /* Bouton blanc après le clic */
+            }
+
+            .text {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 18px;
+            color: black; /* Couleur du texte noir */
+            }
+
+            .plus, .minus {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: black; /* Couleur du texte noir */
+            background-color: white; /* Fond blanc pour les signes */
+            border-radius: 50%;
+            cursor: pointer;
+            display: none; /* Cachés au départ */
+            }
+
+            .plus {
+            order: 2; /* Position à droite */
+            margin-left: auto; /* Pour pousser à droite */
+            }
+
+            .minus {
+            order: 1; /* Position à gauche */
+            margin-right: auto; /* Pour pousser à gauche */
+            }
+
+            .counter-display {
+            font-size: 24px;
+            color: black; /* Couleur du texte noir */
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            margin: 0;
+            }
+            }
+        } 
+       
        } 
     }
-}
+

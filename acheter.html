@@ -15,55 +15,126 @@
             <div class="titrefa">
                 <div class="bouton2 btn-g">
                     <img  src="icon/fleche-inverse.png" alt="fleche-inverse">
-                    <a class="allerta-stencil-regular " href="index.html" class="gauche">menu</a>
+                    <a   href="index.html" class="gauche">menu</a>
                 </div>
-                <h1 class="allerta-stencil-regular ">Tickets</h1>
+                <h1  >Tickets</h1>
                 <div class="bouton2 btn-d">
-                    <a class="allerta-stencil-regular " href="index.html"class="droite">panier</a>
+                    <a   href="index.html"class="droite">panier</a>
                     <img src="icon/fleche.png"  alt="fleche">
                 </div>
             </div>
             <div class="maina">
                 
                 <div class="acheter">
-                    <p class="allerta-stencil-regular ">16/9  billet standard : main stage   75€ </p>
-                    <div class="bouton2">
-                        <a href="">Ajouter au panier</a>
+                    <p  >16/9  billet standard : main stage   75€ </p>
+                    <div class="counter-container">
+                        <button class="counter-button bouton2">
+                            <span class="plus" style="display: none;">+</span>
+                            <span class="counter-display" style="display: none;">0</span>
+                            <span class="minus" style="display: none;">-</span>
+                            <span class="text">Ajouter au panier</span>
+                        </button>
+                
                     </div>
                 </div>
                 <div class="acheter">
-                    <p class="allerta-stencil-regular ">17/9  billet standard : main stage   75€  </p>
-                    <div class="bouton2">
-                        <a href="">Ajouter au panier</a>
+                    <p  >17/9  billet standard : main stage   75€  </p>
+                    <div class="counter-container">
+                        <button class="counter-button bouton2">
+                            <span class="plus" style="display: none;">+</span>
+                            <span class="counter-display" style="display: none;">0</span>
+                            <span class="minus" style="display: none;">-</span>
+                            <span class="text">Ajouter au panier</span>
+                        </button>
+                
                     </div>
                 </div>
                 <div class="acheter">
-                    <p class="allerta-stencil-regular ">18/9  billet standard : main stage   75€  </p>
-                    <div class="bouton2">
-                        <a href="">Ajouter au panier</a>
+                    <p  >18/9  billet standard : main stage   75€  </p>
+                    <div class="counter-container">
+                        <button class="counter-button bouton2">
+                            <span class="plus" style="display: none;">+</span>
+                            <span class="counter-display" style="display: none;">0</span>
+                            <span class="minus" style="display: none;">-</span>
+                            <span class="text">Ajouter au panier</span>
+                        </button>
+                
                     </div>
                 </div>
                 <div class="acheter">
-                    <p class="allerta-stencil-regular ">  billet fan(3jours )                             210€ </p>
-                    <div class="bouton2">
-                        <a href="">Ajouter au panier</a>
+                    <p  >  billet fan(3jours )                             210€ </p>
+                    <div class="counter-container">
+                        <button class="counter-button bouton2">
+                            <span class="plus" style="display: none;">+</span>
+                            <span class="counter-display" style="display: none;">0</span>
+                            <span class="minus" style="display: none;">-</span>
+                            <span class="text">Ajouter au panier</span>
+                        </button>
+                
                     </div>
                 </div>
                 <div class="acheter">
-                    <p class="allerta-stencil-regular ">billet vip(3jours)                              300€ </p>
-                    <div class="bouton2">
-                        <a href="">Ajouter au panier</a>
+                    <p  >billet vip(3jours)                              300€ </p>
+                    <div class="counter-container">
+                        <button class="counter-button bouton2">
+                            <span class="plus" style="display: none;">+</span>
+                            <span class="counter-display" style="display: none;">0</span>
+                            <span class="minus" style="display: none;">-</span>
+                            <span class="text">Ajouter au panier</span>
+                        </button>
+                
                     </div>
                 </div>
                 <div class="acheter">
-                    <p class="allerta-stencil-regular ">nourriture/boisson                             25€  </p>
-                    <div class="bouton2">
-                        <a href="">Ajouter au panier</a>
+                    <p  >nourriture/boisson                             25€  </p>
+                    <div class="counter-container">
+                        <button class="counter-button bouton2">
+                            <span class="plus" style="display: none;">+</span>
+                            <span class="counter-display" style="display: none;">0</span>
+                            <span class="minus" style="display: none;">-</span>
+                            <span class="text">Ajouter au panier</span>
+                        </button>
+                
                     </div>
                 </div>
             </div>
             
         </div>
     </main>
+    <script>
+            document.querySelectorAll('.counter-button').forEach(button => {
+                let counter = 0;
+                let firstClick = true;
+
+                const counterDisplay = button.querySelector('.counter-display');
+                const plusSpan = button.querySelector('.plus');
+                const minusSpan = button.querySelector('.minus');
+                const textSpan = button.querySelector('.text');
+
+                button.addEventListener('click', (event) => {
+                    if (firstClick) {
+                        firstClick = false;
+                        button.classList.add('clicked'); // Ajouter la classe 'clicked' pour le fond blanc
+                        plusSpan.style.display = 'inline';
+                        minusSpan.style.display = 'inline';
+                        counterDisplay.style.display = 'inline';
+                        textSpan.style.display = 'none'; // Cacher le texte "Ajouter au panier"
+                        button.style.justifyContent = 'center'; // Centrer horizontalement
+                        button.style.alignItems = 'center'; // Centrer verticalement
+                    }
+
+                    const rect = button.getBoundingClientRect();
+                    const clickX = event.clientX - rect.left;
+
+                    if (clickX < rect.width / 3 && counter > 0) {
+                        counter--;
+                    } else if (clickX > rect.width * 2 / 3) {
+                        counter++;
+                    }
+
+                    counterDisplay.textContent = counter;
+                });
+            });
+    </script>
 </body>
 </html>
