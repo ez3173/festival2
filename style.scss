@@ -4,16 +4,32 @@
     font-family: "Allerta Stencil", sans-serif;
     font-weight: 400;
     font-style: normal;
+    
 }
 
-button {
-    width:100%;
-    height: 100%;
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 20px;
-    background-color: #fff;
+.btn-g{
+                   
+    img{
+        padding-top: 5px;
+        margin-right: 0  ;
+    }
+    a{
+        font-size: 30px;
+    }
 }
+.btn-d{
+   
+    img{
+        padding-top: 5px;
+        margin-right: 0  ;
+    }
+    a{
+        font-size: 30px;
+    }
+}
+
+
+
 .wrapper{
     margin: 0 14vw ;
     height: 100%;
@@ -104,6 +120,7 @@ header{
             .compteur{
                 display: flex;
                 flex-direction: column;
+                
                 #demo{
 
                     font-size: 48px;
@@ -119,7 +136,7 @@ header{
 
 }
 main{
-    .Line-up{
+    #Line-up{
         background-color: #EA224E;
         height: 100vh;
         width: 100%;
@@ -129,56 +146,8 @@ main{
         .lineup{
             display: grid;
             grid-template-columns: repeat(3,1fr);   
-            a {
-                position: relative;
-                display: inline-block;
-                transition: all 0.3s ease;
-        
-                &::before {
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 50%;
-                    background-color: rgba(0, 0, 0, 0.5); // Filtre semi-transparent
-                    transition: all 0.3s ease;
-                    opacity: 0;
-                }
-        
-                &:hover::before {
-                    opacity: 1;
-                }
-        
-                img {
-                    width: 100%;
-                    height: auto;
-                    transition: all 0.3s ease; // Transition douce pour les transformations
-        
-                    &.default {
-                        height: 300px;
-                        width: 300px;
-                    }
-        
-                    &.small {
-                        height: 150px;
-                    }
-        
-                    &:hover {
-                        height: 300px;
-                    }
-                }
-        
-                &:not(:hover) img {
-                    height: 150px;
-                }
-        
-                &:hover ~ a img,
-                &:hover ~ a img.default {
-                    height: 150px;
-                }
-            }   
-            .lineup2{
+            
+            .lineups{
                
                 height:100vh;
                 width: 33vw;
@@ -189,9 +158,18 @@ main{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                
-                
-                
+                img{
+
+                    display: block;
+                    transition: opacity 0.5s ease;
+                    
+                } 
+                   
+                   
+                img:hover{
+                    opacity: 0.7;
+                    
+                }
                 h1{
                     color: white;
                     display: flex;
@@ -201,13 +179,15 @@ main{
                     
                 }
                 .img3{
-                    padding-bottom: 50px;
-                    width: 300px;
+                  margin-bottom: 50px;  
+                  width: 300px;
+                  height: 300px;
+                    
                 }
                 .img4{
-                    padding-top: 50px;
-                    padding-bottom: 15px;
+                    margin-bottom: 32px;
                 }
+                
                 .titrem{
                     width: 100%;
                    
@@ -261,12 +241,12 @@ main{
                 font-size: 24px;
                 padding: 12px;
             }
-            .bouton{
+            .bouton2{
                 margin-top: 24px;
                 margin-bottom: 24px;
             }
             .activite2{
-                .bouton{
+                .bouton2{
                     margin-top: 72px;
                 }
             }
@@ -276,7 +256,7 @@ main{
     .Tickets{
         background-color: #EA224E;
         color: white;
-        height: 100svh;
+        height: 100vh;
         h1{
             text-align: center;
             font-size: 40px;
@@ -402,6 +382,7 @@ main{
     }
 }
 footer{
+    overflow: hidden;
     width:100%;
     background-color: #E3D56D;
     height: fit-content;
@@ -409,21 +390,21 @@ footer{
         padding-top: 5px;
         display: flex;
         justify-content: center;
-        gap: 75px;
+        column-gap: 5vh;
     }
     .footer3{
         padding-top: 3vh;
         width: 100%;
         display: flex;
-        
+        justify-content: space-between;
         align-items: end;
+        height:100%;
         .menuf{
            display: grid;
-           justify-content: left;
+          
            font-size: 16px;
            row-gap: 8px;
            a{
-
                text-decoration: none;
                color: black;
            }
@@ -432,6 +413,7 @@ footer{
             margin-right: 24px;
         }
         .iconf{
+            height: fit-content;
             
             display: flex;
             column-gap: 24px;
@@ -439,14 +421,307 @@ footer{
         }
 
     }
-    p{
-        text-align: center;
+    #copyrightf{
+        display: block;
+        
+        p{
+            margin-top: 50px;
+            text-align: center;
+        }
     }
 }
-  
+///artiste//
+/// 
+/// 
+///  
+/// 
+#headerart{
+    nav{
+        padding:0;
+    }
+}
+#artiste{
+    background-color: #1A0D43;
+    height: 100vh;
+    color: white;
+    overflow: hidden;
+    .titrefa{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top:95px ;
+        
+        
+        h1{
+            text-align: center;
+        }
+        
+    }
+    .artiste{
+        display: flex;
+        gap: 5vw;
+        padding-top:5vh ;
+        .photo{
+            width: 40vw;
+        }
+        .logoa{
+            width: 100%;
+            display: flex;
+        }
+        .expl{
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+            h2,h3{
+                margin: 0;
+            }
+            h2{
+                font-size: 40px;
+            }
+            h3{
+                font-size: 32px;
+            }
+            p{
+                padding-top: 30px;
+                font-size: 17px;
+            }
+        }
+    }   
+    .spotf{
+        margin-top: 15px;
+        display: flex;
+        width:100%;
+        margin-left: 10vw;
+        margin-bottom: 32px;
+        overflow: hidden;
+        iframe{
+            width: 60vw;
+        }
+    }
+    #logoa2{
+        display: none;    
+    }
+}
+/////formulaire///
+/// 
+/// 
+/// 
+/// 
+///
+///  
+input{
+    width:70%;
+    height: 60px;
+    background-color: #E3D56D;
+    border-radius: 150px;
+}
+#headerform{
+    nav{
+
+        padding: 0;
+    }
+}
+#formulaire{
+    background-color: #1A0D43;
+    height: fit-content;
+    color: white;
+    h1{
+        padding-top: 95px;
+        padding-bottom: 50px;
+        text-align: center;
+        font-size: 32px;
+    }
+    .formulaires{
+        h2{
+            margin-left:15%; 
+            font-size: 20px;
+          }
+        input{
+                
+            margin-bottom: 5vh;
+        }
+        .formulaire{
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            
+            
+          
+            input{
+                
+                margin-bottom: 5vh;
+            }
+        }
+    }
+    .formulaireText{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        input{
+            height: 15vh;
+            border-radius: 80px;
+        }
+
+    }
+    .downMusic{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .envoyer{
+        width: 100%;
+        display: flex;
+        
+        input{
+            padding-bottom: 15px;
+            padding-top: 15px;
+            margin-left: 40vw;
+            height: 75px;
+            width:200px;
+        }
+        
+        
+    }
+}
+
+
+////Acheter////
+/// 
+/// 
+///
+/// 
+#counter-display {
+margin-top: 20px;
+font-size: 24px;
+} 
+#headerach{
+    nav{
+        padding: 0;
+    }
+}
+#acheter{
+    background-color: #EA224E;
+    color: white;
+    height: 100vh;
+    .titrefa{
+        padding-top: 95px;
+        width: 100%;
+        display: flex;
+        padding-bottom: 80px;
+    }
+    .maina{
+        height: 60vh;
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+       .acheter{
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            width: 45%;
+        }
+        text-align: center;
+
+        .bouton2 {
+            display: flex;
+            align-items: center;
+            background-color: #E3D56D; 
+            border-radius: 150px;
+            padding: 10px;
+            width: 250px;
+            height: 50px;
+            justify-content: center; 
+            position: relative;
+            border: none; 
+            cursor: pointer;
+
+            &.clicked {
+            background-color: white; 
+            }
+
+            .text {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 18px;
+            color: black; 
+            }
+
+            .plus, .minus {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: black; 
+            background-color: white; 
+            border-radius: 50%;
+            cursor: pointer;
+            display: none; 
+            }
+
+            .plus {
+            order: 2; 
+            margin-left: auto; 
+            }
+
+            .minus {
+            order: 1;
+            margin-right: auto; 
+            }
+
+            .counter-display {
+            font-size: 24px;
+            color: black; 
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            margin: 0;
+            }
+            }
+        } 
+       
+       } 
+    }
+
 @media all and (max-height: 1000px)   {
     main{
-       
+        #artiste{
+            height: fit-content;
+        }
+        #Line-up{
+            height: 832px;
+            .lineup{
+                .lineups{
+                    height: 832px;
+                }
+            }
+        }
+        .Tickets{
+            height: fit-content;
+            .ticket{
+                height: 700px;
+                padding-bottom: 15px;
+                .ticket1,.ticket2{
+                    .bouton2{
+                        margin-top: 200px;
+                    }
+                }
+                .ticket3{
+                    .bouton2{
+                        margin-top: 124px;
+                    }
+                }
+            }
+        }
         .Infos{
             height: fit-content;
             .infos{
@@ -469,7 +744,18 @@ footer{
             }
         }
     }
-    
+    footer{
+        height: 750px;
+        .footer3{
+            height: 440px;
+        }
+    }
+    #acheter{
+        height: 999px;
+        .maina{
+            height: 600px;
+        }
+    }
 
 }
 
@@ -629,6 +915,7 @@ footer{
                 gap: 40px;
                 .compteur{
                     display: flex;
+                    margin-bottom: 24px;
                 }   
                 .bouton{
                     display: flex;
@@ -652,7 +939,7 @@ footer{
     }
 
     main {
-        .Line-up {
+        #Line-up {
             height:fit-content;
             .lineup {
                 grid-template-columns: repeat(1, 1fr);
@@ -869,231 +1156,110 @@ footer{
       }
     
 }
-///artiste//
-/// 
-/// 
-///  
-/// 
-.titrefa{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-top:95px ;
-    padding-bottom:10vh;
-    
-}
-.btn-g{
-           
-    img{
-        padding-top: 5px;
-        margin-right: 0  ;
-    }
-    a{
-        font-size: 30px;
-    }
-}
-.btn-d{
-   
-    img{
-        padding-top: 5px;
-        margin-right: 0  ;
-    }
-    a{
-        font-size: 30px;
-    }
-}
-#artiste{
-    background-color: #1A0D43;
-    height: 100vh;
-    color: white;
-    
-    .artiste{
-        display: flex;
-        gap: 5vw;
-        padding-top:5vh ;
-        .logoa{
-            display: flex;
-        }
-        .expl{
-            display: flex;
-            flex-direction: column;
-            row-gap: 25px;
-            h2,h3{
-                margin: 0;
-            }
-            h2{
-                font-size: 40px;
-            }
-            h3{
-                font-size: 32px;
-            }
-            p{
-                padding-top: 30px;
-                font-size: 17px;
+
+    @media all and (max-width: 870px) {
+        .bouton2{
+            a{
+
+                font-size: 18px;  
             }
         }
-    }   
-}
-/////formulaire///
-/// 
-/// 
-/// 
-/// 
-///
-///  
-input{
-    width:70%;
-    height: 60px;
-    background-color: #E3D56D;
-    border-radius: 150px;
-}
-#formulaire{
-    background-color: #1A0D43;
-    height: 100vh;
-    color: white;
-    h1{
-        padding-top: 95px;
-        padding-bottom: 50px;
-        text-align: center;
-        font-size: 40px;
-    }
-    .formulaires{
-        h2{
-            margin-left:15%; 
-            font-size: 30px;
-          }
-        input{
-                
-            margin-bottom: 5vh;
-        }
-        .formulaire{
-            width:100%;
-            display: flex;
-            flex-direction: column;
-            
-            
-          
-            input{
-                
-                margin-bottom: 5vh;
-            }
-        }
-    }
-    .formulaireText{
-        width:100%;
-        display: flex;
-        flex-direction: column;
-        input{
-            height: 15vh;
-            border-radius: 80px;
-        }
-
-    }
-    .downMusic{
-        width:100%;
-        display: flex;
-        flex-direction: column;
-
-    }
-    .envoyer{
-        width:150px;
-        margin-right: 5vh;
-    }
-}
-
-
-////Acheter////
-/// 
-/// 
-///
-/// 
-#counter-display {
-margin-top: 20px;
-font-size: 24px;
-} 
-#acheter{
-    background-color: #EA224E;
-    color: white;
-    height: 100vh;
-    .maina{
-        height: 60vh;
-        width:100%;
-        display:flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-       .acheter{
-        width:100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        p{
-            width: 45%;
-        }
-        text-align: center;
-
-        .bouton2 {
-            display: flex;
-            align-items: center;
-            background-color: #E3D56D; /* Bouton rouge par défaut */
-            border-radius: 150px;
-            padding: 10px;
-            width: 250px;
-            height: 50px;
-            justify-content: center; /* Centrer horizontalement */
-            position: relative;
-            border: none; /* Supprimer la bordure */
-            cursor: pointer;
-
-            &.clicked {
-            background-color: white; /* Bouton blanc après le clic */
-            }
-
-            .text {
-            flex-grow: 1;
-            text-align: center;
-            font-size: 18px;
-            color: black; /* Couleur du texte noir */
-            }
-
-            .plus, .minus {
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            line-height: 30px;
-            font-size: 20px;
-            font-weight: bold;
-            color: black; /* Couleur du texte noir */
-            background-color: white; /* Fond blanc pour les signes */
-            border-radius: 50%;
-            cursor: pointer;
-            display: none; /* Cachés au départ */
-            }
-
-            .plus {
-            order: 2; /* Position à droite */
-            margin-left: auto; /* Pour pousser à droite */
-            }
-
-            .minus {
-            order: 1; /* Position à gauche */
-            margin-right: auto; /* Pour pousser à gauche */
-            }
-
-            .counter-display {
+        h1{
             font-size: 24px;
-            color: black; /* Couleur du texte noir */
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            display: none;
-            margin: 0;
-            }
-            }
-        } 
-       
-       } 
-    }
+        }
+        h2{
+            font-size: 22px;
+        }
+        h3{
+            font-size: 20px;
+        }
+        p{
+            font-size: 16px;
+        }
+        main{
+            #Line-up{
+                .lineup{
+                    .lineups{
 
+                        .img3{
+                            width: 200px;
+                            height: 200px;
+                        }
+                    }
+                }
+            }
+            .activite{
+                .activites{
+                    p{
+                        font-size: 20px;
+                    }
+                }
+            }
+            .Infos{
+                .infos{
+                    .contact{
+                        .contacts{
+                            p{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        #artiste{
+            width: 100vh;
+            height: fit-content;
+            .artiste{
+                flex-direction: column;
+                .photo{
+                    width: auto;
+                    img{
+                        width: 250px;
+                    }
+                }
+                #logoa1{
+                    display: none;
+                }
+                .expl{
+                    text-align: center;
+                }
+            }
+            #logoa2{
+                display: block;
+                display: flex;
+                width: 320px;
+                padding-top:15px ;
+                padding-bottom: 15px;
+            }
+            .spotf{
+                
+                margin: auto;
+                padding-top: 15px;
+            }
+        }
+        #acheter{
+            overflow: hidden;
+            .maina{
+                font-size: 16px;
+                .acheter{
+                    
+                    .bouton2{
+                        width: 130px;
+                        
+                    }
+                }
+            }
+        }
+        #formulaire{
+            .envoyer{
+                input{
+                    margin-top: 15px;
+                    margin-left: 0;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        
+    }

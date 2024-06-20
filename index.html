@@ -9,6 +9,46 @@
     </style>
     <title>Festival de Jazz</title>
 </head>
+<style>
+    .image-container:hover .overlay {
+  opacity: 1; /* Lorsqu'on survole l'image, le texte devient visible */
+}
+</style>
+<meta
+      name="description"
+      content="EPSE, Enseignement de Promotion Sociale d'Enghien"
+    >
+
+    <link rel="apple-touch-icon" sizes="57x57" href="img/abstract-7476911_1280 1.svg">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/abstract-7476911_1280 1.svg">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/abstract-7476911_1280 1.svg">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/abstract-7476911_1280 1.svg">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/abstract-7476911_1280 1.svg">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/abstract-7476911_1280 1.svg">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/abstract-7476911_1280 1.svg">
+    <link rel="icon" type="image/svg" href="img/abstract-7476911_1280 1.svg"sizes="196x196">
+    <link rel="icon" type="image/svg" href="img/abstract-7476911_1280 1.svg" sizes="160x160">
+    <link rel="icon" type="image/svg" href="img/abstract-7476911_1280 1.svg" sizes="96x96">
+    <link rel="icon" type="image/svg" href="img/abstract-7476911_1280 1.svg" sizes="16x16">
+    <link rel="icon" type="image/svg" href="img/abstract-7476911_1280 1.svg" sizes="32x32">
+    <link rel="icon" type="image/svg" href="img/abstract-7476911_1280 1.svg">
+    <meta name="application-name" content="EPSE">
+    <meta property="og:title" content="Enseignement de Promotion Sociale d'Enghien">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/logo_epse_1800x945.png">
+    <meta property="og:image:width" content="1800">
+    <meta property="og:image:height" content="945">
+    <meta property="og:url" content="https://www.epse.be/">
+    <meta property="og:description" content="L'EPSE est un établissement de promotion sociale reconnu et subsidié par la Fédération Wallonie-Bruxelles"> 
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="EPSE">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@epse">
+    <meta name="twitter:title" content="Enseignement de Promotion Sociale d'Enghien">
+    <meta name="twitter:description" content="L'EPSE est un établissement de promotion sociale reconnu et subsidié par la Fédération Wallonie-Bruxelles">
+    <meta name="twitter:image" content="images/logo_epse.png">
+    <link rel="canonical" href="https://www.epse.be/">
 <body>
     
     <header>
@@ -20,13 +60,14 @@
             <div id="menu">
                   
                 <ul>
-                    <li class="second" ><a href="Line-up"
+                    <li ><a href="index.html">Home</a></li>
+                    <li  ><a href="index.html#Line-up"
                         >Line-up</a></li>
-                    <li><a href="Activités"
+                    <li><a href="index.html#activite"
                         >Activités</a></li>
-                    <li><a href="Tickets"
+                    <li><a href="index.html#ticket"
                         >Tickets</a></li>
-                    <li><a href="Infos"
+                    <li><a href="index.html#info"
                         >Infos</a></li>
                 </ul>
             </div>
@@ -54,12 +95,12 @@
     </header>
     <main>
        
-        <div href="Line-up" class="Line-up ">
+        <div  id="Line-up">
             <div class="wrapper">
 
                
                 <div class="lineup">
-                    <div class="lineup2" id="lineup1">
+                    <div class="lineups" id="lineup1">
                         <div class="titrem">
 
                             <h1 
@@ -67,16 +108,19 @@
                             <h2 
                             >16/9</h2>
                         </div>
-                        <a href="artiste.html">
-
-                            <img class="img3" src="img/steve lacy 1.svg" alt="Steve Lacy">
+                        <a href="artiste.html" class="image-link">
+                            <div class="image-container">
+                                <img class="img3 default" src="img/steve lacy 1.svg" alt="Steve Lacy">
+                                
+                            </div>
                         </a>
                         <a href="artiste.html">
 
-                            <img class="img4" src="img/téléchargé (1) 1.svg" alt="">
+                            <img class="img4 small" src="img/téléchargé (1) 1.svg" alt="">
+                            
                         </a>
                     </div>
-                    <div class="lineup2" id="lineup2">
+                    <div class="lineups" id="lineup2">
                         <div class="titrem">
 
                             <h1 
@@ -87,15 +131,17 @@
                         
                         <a href="artiste.html">
 
-                            <img class="img3"src="img/Screenshot+2023-09-22+at+3.23 1.svg" alt="">
+                            <img class="img3 default"src="img/Screenshot+2023-09-22+at+3.23 1.svg" alt="">
+                            
                         </a>
                         <a href="artiste.html">
 
-                            <img class="img4" src="img/A-3384-1330016032 1.svg" alt="The Cinematic Orchestra">
+                            <img class="img4 small" src="img/A-3384-1330016032 1.svg" alt="The Cinematic Orchestra">
+                            
                         </a>
                         
                     </div>
-                    <div class="lineup2" id="lineup3">
+                    <div class="lineups" id="lineup3">
                         <div class="titrem">
 
                             <h1 
@@ -105,17 +151,19 @@
                         </div>
                         <a href="artiste.html">
 
-                            <img class="img3" src="img/Michael-Buble-1-c70dcf5adc0d47ca8e1449178cc4c26b 1.svg" alt="Michael Buble">
+                            <img class="img3 default" src="img/Michael-Buble-1-c70dcf5adc0d47ca8e1449178cc4c26b 1.svg" alt="Michael Buble">
+                            
                         </a>
                         <a href="artiste.html">
 
-                            <img class="img4" src="img/A-3384-1330016032 1.svg" alt="">
+                            <img class="img4 small" src="img/A-3384-1330016032 1.svg" alt="The Cinematic Orchestra">
+                            
                         </a>
                     </div>
                 </div>   
             </div>
         </div>
-        <div class="activite">
+        <div class="activite" id="activite">
             <div class="wrapper">
                 <h1 
                 >Activités</h1>
@@ -138,7 +186,7 @@
                         <p 
                         >    
                             -place limité (12 personnes)</p>
-                        <div class="bouton">
+                        <div class="bouton2">
                             <a href="formulaire.html">Candidature</a>
                         </div>
                     </div>
@@ -150,15 +198,15 @@
                         >-éviter les files d’attentes</p>
                         <p 
                         >-toute nourriture(vegan/gluten)</p>
-                        <div class="bouton">
-                            <a href="acheter">Acheter</a>
+                        <div class="bouton2">
+                            <a href="acheter.html">Acheter</a>
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
-        <div class="Tickets">
+        <div class="Tickets" id="ticket">
             <div class="wrapper">
                
                 <h1 
@@ -254,7 +302,7 @@
             </div>
 
         </div>
-        <div class="Infos">
+        <div class="Infos"id="info">
             <div class="wrapper">
                 <h1 
                 >Infos</h1>
@@ -296,6 +344,47 @@
             </div>
         </div>
     </main>
+   
+
+    <footer>
+        <div class="wrapper">
+
+            <div class="sponsor">
+                <img id="eri"src="img/image 6.svg" alt="Eristof" >
+                <img id="fwb"src="img/image 2.svg" alt="Fédération Wallonie Bruxelles" >
+                <img id="proxi" src="img/image 3.svg" alt="Proximus" >
+                <img id="fuze" src="img/image 4.svg" alt="Fuzetea" >
+                <img id="win" src="img/image 5.svg" alt="WinforLife" >
+            </div>
+            <div class="footer3">
+                <div class="menuf">
+                    <a href="index.html" 
+                    >Home</a>
+                    <a href="index.html#Line-up" 
+                    >Line-up</a>
+                    <a href="index.html#activite" 
+                    >Activités</a>
+                    <a href="index.html#ticket" 
+                    >Tickets</a>
+                    <a href="index.html#info"
+                    >Infos</a>
+                </div>
+                <div class="logof">
+                    <img src="img/abstract-7476939_1280 1.svg" alt="logo2">
+                 </div>
+                <div class="iconf">
+                    <img src="icon/Vector-1.png" alt="twitter">
+                    <img src="icon/Vector-2.png" alt="instagram">
+                    <img src="icon/Vector-3.png" alt="youtube">
+                    <img src="icon/Vector.png" alt="facebook">
+                </div>
+            </div>
+            <div id="copyrightf">
+                <p>copyright2024</p>
+            </div>
+           
+        </div>
+    </footer>
     <script>
         var burgerMenu = document.getElementById('burger-menu');
 
@@ -334,43 +423,5 @@
         }
         }, 1000);
     </script>
-    <footer>
-        <div class="wrapper">
-
-            <div class="sponsor">
-                <img id="eri"src="img/image 6.svg" alt="Eristof" >
-                <img id="fwb"src="img/image 2.svg" alt="Fédération Wallonie Bruxelles" >
-                <img id="proxi" src="img/image 3.svg" alt="Proximus" >
-                <img id="fuze" src="img/image 4.svg" alt="Fuzetea" >
-                <img id="win" src="img/image 5.svg" alt="WinforLife" >
-            </div>
-            <div class="footer3">
-                <div class="menuf">
-                    <a href="Menu" 
-                    >Menu</a>
-                    <a href="line-up" 
-                    >Line-up</a>
-                    <a href="Activites" 
-                    >Activités</a>
-                    <a href="Tickets" 
-                    >Tickets</a>
-                    <a href="Infos"
-                    >Infos</a>
-                </div>
-                <div class="logof">
-                    <img src="img/abstract-7476939_1280 1.svg" alt="logo2">
-                 </div>
-                <div class="iconf">
-                    <img src="icon/Vector-1.png" alt="twitter">
-                    <img src="icon/Vector-2.png" alt="instagram">
-                    <img src="icon/Vector-3.png" alt="youtube">
-                    <img src="icon/Vector.png" alt="facebook">
-                </div>
-            </div>
-            <div id="copyright">
-                <p>copyright2024</p>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>

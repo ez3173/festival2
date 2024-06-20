@@ -10,6 +10,28 @@
     </style>
 </head>
 <body>
+    <header id="headerform">
+        <nav >
+            <div id="burger-menu">
+                <span></span>
+            </div>
+              
+            <div id="menu">
+                  
+                <ul>
+                    <li ><a href="index.html">Home</a></li>
+                    <li  ><a href="index.html#Line-up"
+                        >Line-up</a></li>
+                    <li><a href="index.html#activite"
+                        >Activités</a></li>
+                    <li><a href="index.html#ticket"
+                        >Tickets</a></li>
+                    <li><a href="index.html#info"
+                        >Infos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>  
     <main id="formulaire">
         <div class="wrapper">
             <h1 class="allerta-stencil-regular ">Formulaire</h1>
@@ -37,10 +59,25 @@
                     <img src="icon/download.svg" alt="musique">
                 </div>
                 <div class="envoyer">
-                    <input type="submit" value="envoyer">
+                    <a href="#">
+                        
+
+                            <input type="submit" value="envoyer">
+                        
+                    </a>
                 </div>
             </div> 
         </div>   
     </main>
+    <script>
+        var burgerMenu = document.getElementById('burger-menu');
+
+        var overlay = document.getElementById('menu');
+
+        burgerMenu.addEventListener('click', function() {
+        this.classList.toggle("close");
+        overlay.classList.toggle("overlay");
+        });
+    </script>
 </body>
 </html>

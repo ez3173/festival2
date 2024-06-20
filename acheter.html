@@ -10,6 +10,28 @@
     <title>Achat</title>
 </head>
 <body>
+    <header id="headerach">
+        <nav >
+            <div id="burger-menu">
+                <span></span>
+            </div>
+              
+            <div id="menu">
+                  
+                <ul>
+                    <li ><a href="index.html">Home</a></li>
+                    <li  ><a href="index.html#Line-up"
+                        >Line-up</a></li>
+                    <li><a href="index.html#activite"
+                        >Activités</a></li>
+                    <li><a href="index.html#ticket"
+                        >Tickets</a></li>
+                    <li><a href="index.html#info"
+                        >Infos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <main id="acheter">
         <div class="wrapper">
             <div class="titrefa">
@@ -97,11 +119,21 @@
                 
                     </div>
                 </div>
+                
             </div>
-            
+              
         </div>
     </main>
     <script>
+            var burgerMenu = document.getElementById('burger-menu');
+
+            var overlay = document.getElementById('menu');
+
+            burgerMenu.addEventListener('click', function() {
+            this.classList.toggle("close");
+            overlay.classList.toggle("overlay");
+            });
+            
             document.querySelectorAll('.counter-button').forEach(button => {
                 let counter = 0;
                 let firstClick = true;
